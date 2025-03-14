@@ -1,12 +1,15 @@
-import React from 'react'
+import React from "react";
+import { AppProvider } from "@shopify/polaris";
+import "@shopify/polaris/build/esm/styles.css";
 import ToDoContainer from './components/ToDoContainer'
 
-const App = () => {
+
+function App() {
   return (
-   <>
-   <ToDoContainer/>
-   </>
-  )
+    <AppProvider i18n={{}}>
+     <ToDoContainer/>
+    </AppProvider>
+  );
 }
 
-export default App
+export default App;
